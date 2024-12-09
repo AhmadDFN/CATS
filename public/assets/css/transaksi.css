@@ -1,0 +1,203 @@
+/* Palet warna */
+:root {
+    --color-bg: #f6f4eb;
+    --color-primary: #91c8e4;
+    --color-secondary: #749bc2;
+    --color-accent: #4682a9;
+    --text-light: #ffffff;
+}
+
+/* TRANSAKSI */
+
+body {
+    background-color: var(--color-primary);
+}
+
+/* Menu List */
+.card-header {
+    background-color: var(--color-secondary);
+    color: var(--text-light);
+    font-weight: bold;
+    border-radius: 15px 15px 0 0; /* Rounded top corners */
+}
+
+.card-header .row .col-8 .card-title {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.menu-list .menu-item .inner {
+    position: relative;
+    border: 1px solid #000;
+    margin-bottom: 15px;
+}
+
+.menu-list .menu-item .inner .thumb-menu {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    -o-object-fit: cover;
+    object-position: center top;
+    -o-object-position: center top;
+}
+
+.menu-list .menu-item .inner h2 {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #095336; /* Replace this with your primary color */
+}
+
+.menu-list .menu-item .inner h2 span {
+    color: #fa4032; /* Using the new accent color */
+}
+
+/* Form Transaksi */
+.transaksi {
+    position: relative;
+    padding: 15px;
+    background-color: var(
+        --color-secondary
+    ); /* Background color set to #fef3e2 */
+    height: 100vh;
+    font-family: monospace;
+}
+
+.transaksi h2 {
+    position: relative;
+    font-size: 22px;
+}
+
+.transaksi #meja {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--color-primary); /* Border color set to #fa812f */
+}
+
+.transaksi .detail {
+    position: relative;
+    height: 41vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.transaksi .detail:hover {
+    overflow-y: auto;
+}
+
+.transaksi .detail .detail-item {
+    position: relative;
+    padding: 0 5px;
+    margin: 5px 0;
+}
+
+.transaksi .detail .detail-item h4 {
+    position: relative;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.transaksi .detail .detail-item .price h4 {
+    position: relative;
+    text-align: right;
+    font-size: 16px;
+}
+
+.transaksi .detail .detail-item .price h4 span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+.transaksi .detail .detail-item input[type="number"] {
+    background-color: var(--color-bg);
+    display: inline-block;
+    width: 50px;
+    border: 0;
+    margin-left: 10px;
+}
+
+.transaksi .detail .detail-item input[type="number"]:focus {
+    outline: none;
+}
+
+.transaksi .detail .detail-item .delete {
+    font-size: 18px;
+    color: var(--color-accent); /* Set delete button color to #fa4032 */
+    display: none;
+    text-align: right;
+}
+
+.transaksi .detail .detail-item:hover .delete {
+    display: block;
+}
+
+.transaksi .other-item p {
+    margin: 2px 0;
+}
+
+.transaksi .price p {
+    position: relative;
+    text-align: right;
+}
+
+.transaksi .price p span {
+    position: absolute;
+    left: 0;
+}
+
+.transaksi #amount {
+    position: relative;
+    text-align: right;
+    font-size: 30px;
+}
+
+.transaksi #amount span {
+    position: absolute;
+    left: 0;
+}
+
+.transaksi .btn-action button {
+    width: 100%;
+    background-color: var(
+        --color-primary
+    ); /* Button background color set to #fab12f */
+    color: var(--color-bg); /* Button text color set to white */
+}
+
+/* IMG */
+/* Custom */
+
+.thumb-menu {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top center;
+    -o-object-fit: cover;
+    -o-object-position: top center;
+    /* border: 10px solid pink; */
+}
+
+.thumb-menu-big {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top center;
+    -o-object-fit: cover;
+    -o-object-position: top center;
+}
+
+img#photo-preview {
+    height: auto;
+}
