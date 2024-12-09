@@ -27,122 +27,97 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <style>
-        :root {
-            --background-color: #fef3e2;
-            --primary-color: #fab12f;
-            --secondary-color: #fbd288;
-            --accent-color: #fa4032;
-            --hover-color: #fa812f;
-            --text-color: #ffffff;
-            --heading-color: #fb3f33;
-        }
-
         body {
-            background-color: var(--background-color);
+            background: linear-gradient(135deg, #91c8e4, #f6f4eb);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-family: "Arial", sans-serif;
         }
 
-        .card {
-            background-color: var(--primary-color);
+        .login-card {
+            background: #fff;
             border: none;
-            border-radius: 12px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
         }
 
-        .logo {
-            font-size: 3rem;
-            color: var(--accent-color);
-        }
-
-        .card-title {
-            color: var(--heading-color);
-        }
-
-        .card-text {
-            color: var(--secondary-color);
-        }
-
-        .form-label {
-            color: var(--text-color);
+        .login-card .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4682a9;
         }
 
         .form-control {
-            background-color: var(--secondary-color);
-            border: 1px solid var(--hover-color);
-            color: var(--text-color);
-            border-radius: 8px;
+            border-radius: 10px;
+            border: 1px solid #91c8e4;
         }
 
-        .form-control:focus {
-            border-color: var(--hover-color);
-            box-shadow: 0 0 4px var(--hover-color);
+        .btn-login {
+            background-color: #91c8e4;
+            color: #fff;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s;
         }
 
-        .btn-accent {
-            background-color: var(--accent-color);
-            color: var(--text-color);
-            border-radius: 8px;
-            border: none;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+        .btn-login:hover {
+            background-color: #4682a9;
         }
 
-        .btn-accent:hover {
-            background-color: var(--hover-color);
-            transform: translateY(-2px);
-        }
-
-        .text-accent {
-            color: var(--accent-color);
+        .forgot-password-link {
+            font-size: 0.9rem;
+            color: #749bc2;
             text-decoration: none;
+        }
+
+        .forgot-password-link:hover {
+            color: #4682a9;
+        }
+
+        .signup-link {
+            font-size: 0.9rem;
+            color: #4682a9;
             font-weight: bold;
         }
 
-        .text-accent:hover {
+        .signup-link:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
-    <div class="container-xxxl position-relative bg-white d-flex p-0">
-        <!-- Spinner Start -->
-        <div id="spinner"
-            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+    <div class="login-card">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <a href="{{ url('auth/login') }}" class="">
+                <h3 class="text-primary"><img class="rounded-circle" src="{{ asset('assets/img/Logo.jpg') }}"
+                        alt="DimsumBliss" style="width: 200px; height: 50px;margin-right: 10px;margin-top:-5px;">
+                </h3>
+            </a>
+            <h3>Log In</h3>
         </div>
-        <!-- Spinner End -->
-        <div class="container d-flex justify-content-center align-items-center min-vh-100">
-            @if ($errors->has('username'))
-                <div id="toast-container"></div>
-            @endif
-            <div class="card p-4 shadow-lg" style="min-width: 450px; border-radius: 12px">
-                <div class="card-body text-center">
-                    <img class="rounded-circle" src="{{ asset('assets/img/Logo.jpg') }}" alt="DimsumBliss"
-                        style="width: 100px; height: 100px;margin-right: 10px;margin-top:-5px;">
-                    <h2 class="card-title mb-2">Welcome Back!</h2>
-                    <form action="{{ url('auth/login') }}" method="post">
-                        @csrf
-                        <div class="mb-3">
-                            <label for="username" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Enter your username"
-                                name="username" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter your password"
-                                name="password" required />
-                        </div>
-                        <button type="submit" class="btn btn-accent w-100 py-2">
-                            Login
-                        </button>
-                    </form>
-                    <p class="mt-3 text-muted">
-                        Tidak ada akun? Kontak ke <span style="color: Red">Admin</span>
-                    </p>
-                </div>
+        <form action="{{ url('auth/login') }}" method="post">
+            @csrf
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter your email"
+                    name="username" />
             </div>
-        </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter your password"
+                    name="password" />
+            </div>
+            <button type="submit" class="btn btn-login w-100 mb-3">Login</button>
+            <div class="text-center">
+                <span>Dont have an account? Call Admin</span>
+            </div>
+        </form>
     </div>
     <!-- JavaScript Libraries -->
 
@@ -159,6 +134,8 @@
     <script src="{{ asset('assets/lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
     <script src="{{ asset('assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Template Javascript -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
 

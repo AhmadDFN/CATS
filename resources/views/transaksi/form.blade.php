@@ -4,7 +4,7 @@
 @section('page-title', $page)
 
 @section('content')
-    <div class="row m-0 p-0" style="background-color: #91c8e4">
+    <div class="row m-0 p-0" style="background-color: #c8e8f8">
         {{-- Loading --}}
         <div id="loading"></div>
         {{--  End Transaksi  --}}
@@ -14,7 +14,7 @@
                     <div class="row">
                         <div class="col-8">
                             <h2 class="card-title" style="font-size: 24px;">
-                                <a href="{{ url('/') }}"><i class="fas fa-home" style="color: #4682a9"></i></a> DAFTAR
+                                <a href="{{ url('/') }}"><i class="fas fa-home" style="color: #c8e8f8"></i></a> DAFTAR
                                 PRODUK
                             </h2>
                         </div>
@@ -90,14 +90,10 @@
                         </div>
                     </div>
                     <p>
-                        <input style="border: 2px solid rgb(0, 0, 0); width:100%;" type="text" name="catatan"
-                            id="catatan" value="Catatan Belum Diisi">
-                    </p>
-                    <p>
-                        <select class="form-select" id="pembayaran" name="pembayaran"
+                        <select class="form-select bg-info bg-opacity-50" id="pembayaran" name="pembayaran"
                             aria-label="Floating label select example">
-                            <option value="Cash">Cash</option>
-                            <option value="Hutang">Uang Muka</option>
+                            <option value="Cash" class="bg-info">Cash</option>
+                            <option value="Hutang" class="bg-info">Uang Muka</option>
                         </select>
                         <label for="trans_pembayaran">Pembayaran</label>
                     </p>
@@ -129,11 +125,12 @@
                     <input type="hidden" id="gtotal" name="gtotal">
                     <div class="row btn-action">
                         <div class="col-md-6">
-                            <button id="btn-save" class="btn text-light border border-dark" border: 2px solid #d00054;"
-                                type="button" onclick="save_transaksi()"
+                            <button id="btn-save" class="btn text-dark border border-dark border-3"
+                                style="border: 2px solid #d00054;" type="button" onclick="save_transaksi()"
                                 data-url="{{ url('transaksi/nota') }}">SIMPAN</button>
-                            <button id="btn-new" class="btn d-none text-light" border: 2px solid #d00054;" type="button"
-                                onclick="new_transaksi()">TRANSAKSI BARU</button>
+                            <button id="btn-new" class="btn d-none text-dark border-dark border-3"
+                                style="border: 2px solid #d00054;" type="button" onclick="new_transaksi()">TRANSAKSI
+                                BARU</button>
                         </div>
                         <div class="col-md-6">
 

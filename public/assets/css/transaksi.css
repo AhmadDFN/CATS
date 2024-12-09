@@ -2,7 +2,7 @@
 :root {
     --color-bg: #f6f4eb;
     --color-primary: #91c8e4;
-    --color-secondary: #749bc2;
+    --color-accent: #749bc2;
     --color-accent: #4682a9;
     --text-light: #ffffff;
 }
@@ -15,10 +15,10 @@ body {
 
 /* Menu List */
 .card-header {
-    background-color: var(--color-secondary);
+    background-color: var(--color-accent);
     color: var(--text-light);
     font-weight: bold;
-    border-radius: 15px 15px 0 0; /* Rounded top corners */
+    border-radius: 80px 80px 0 0; /* Rounded top corners */
 }
 
 .card-header .row .col-8 .card-title {
@@ -62,11 +62,10 @@ body {
 .transaksi {
     position: relative;
     padding: 15px;
-    background-color: var(
-        --color-secondary
-    ); /* Background color set to #fef3e2 */
+    background-color: var(--color-accent); /* Background color set to #fef3e2 */
     height: 100vh;
     font-family: monospace;
+    border-radius: 20px 0 20px 15px; /* Rounded top corners */
 }
 
 .transaksi h2 {
