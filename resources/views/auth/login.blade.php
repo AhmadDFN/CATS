@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <title>{{ $page }} | DimsumBliss</title>
+    <title>{{ $page }} | CATS</title>
 
     <!-- Favicon -->
     <link href="{{ asset('assets/img/Logo.jpg') }}" rel="icon">
@@ -96,7 +96,7 @@
         <div class="d-flex align-items-center justify-content-between mb-3">
             <a href="{{ url('auth/login') }}" class="">
                 <h3 class="text-primary"><img class="rounded-circle" src="{{ asset('assets/img/Logo.jpg') }}"
-                        alt="DimsumBliss" style="width: 200px; height: 50px;margin-right: 10px;margin-top:-5px;">
+                        alt="CATS" style="width: 200px; height: 50px;margin-right: 10px;margin-top:-5px;">
                 </h3>
             </a>
             <h3>Log In</h3>
