@@ -130,7 +130,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
             <div class="container-fluid">
                 <button class="btn btn-info" id="toggleSidebar">☰</button>
-                <h4 class="ms-3 mb-0">DimsumBliss</h4>
+                <h4 class="ms-3 mb-0">CATS</h4>
             </div>
         </nav>
 

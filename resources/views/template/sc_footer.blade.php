@@ -55,6 +55,6 @@
     }
 
     // Contoh pemanggilan
-    showToast('Login Berhasil !! - Selamat Datang di DimsumBliss', true); // Untuk notifikasi berhasil
+    showToast('Login Berhasil !! - Selamat Datang di CATS', true); // Untuk notifikasi berhasil
     // showToast('Login gagal. Kata sandi yang Anda masukkan salah.', false); // Untuk notifikasi gagal
 </script>

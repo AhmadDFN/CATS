@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <title>@yield('title') | DimsumBliss</title>
+    <title>@yield('title') | CATS</title>
     <!-- Favicon -->
     <link href="{{ asset('assets/img/Logo.jpg') }}" rel="icon">
 

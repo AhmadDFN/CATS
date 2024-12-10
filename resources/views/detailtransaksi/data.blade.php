@@ -144,7 +144,7 @@
         <tr>
             <td width="5%"><img src="{{ asset('assets/img/Logo.jpg') }}" alt=""></td>
             <td>
-                <h2>DimsumBliss</h2>
+                <h2>CATS</h2>
                 <p>JL in aja dulu no 1 Kota Semarang</p>
                 <a href="{{ url('/') }}" style="text-decoration: none"><button class="button-56"
                         role="button">Home</button></a>

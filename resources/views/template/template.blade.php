@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <title>@yield('page-title') | DimsumBliss</title>
+    <title>@yield('page-title') | CATS</title>
 
     @include('template.sc_head')
 
@@ -73,11 +73,11 @@
                 <div class="bg-light rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">DimsumBliss</a>, inc.
+                            &copy; <a href="#">CATS</a>, inc.
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end" style="padding-right: 50px !important;">
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="#">DimsumBliss</a>
+                            Designed By <a href="#">CATS</a>
                         </div>
                     </div>
                 </div>
