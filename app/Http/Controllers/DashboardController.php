@@ -47,7 +47,7 @@ class DashboardController extends Controller
             'page' => 'Dashboard',
         ];
 
-        dd($data);
+        // dd($data);
         return view("dashboard", $data);
     }
 

@@ -63,7 +63,7 @@ class AuthController extends Controller
         }
 
         User::create([
-            'username' => 'zada',
+            'username' => 'KELOMPOK 1',
             'email_verified_at' => date("Y-m-d h:i:s"),
             'password' => Hash::make('123'),
             'remember_token' => $code,
